@@ -1,4 +1,5 @@
 require('dotenv').config();
+const connectdb = require('./util/db');
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -23,6 +24,9 @@ client.on('ready', () => {
   //to add = greetings when start to run on server
   console.log('bot running');
 });
+
+//connecting to database
+connectdb();
 
 client.on('message', (message) => {
   //check if the message doesn't have the right prefix or if the bot isn't trying to make a command to itself
