@@ -21,7 +21,7 @@ module.exports = {
       message.channel.send(displayXP);
     } catch (err) {
       console.error(err.message);
-      return message.reply(`Couldn't create new player, error ${err.message}`);
+      return message.reply(`Couldn't find xp, error ${err.message}`);
     }
   },
 };
