@@ -36,9 +36,6 @@ client.on('message', (message) => {
   const args = message.content.slice(prefix.length).trim().split(/ +/);
   const commandName = args.shift().toLowerCase();
 
-  //if there is no command equal to message
-  if (!client.commands.has(commandName)) return;
-
   //passing the command name or a alias of it to a variable
   const command =
     client.commands.get(commandName) ||
@@ -48,7 +45,7 @@ client.on('message', (message) => {
 
   if (!command) return;
 
-  //if there is no command (or the user didn't understand the usage of the command)
+  //if there is command and the user didn't understand the usage of the command
   if (command.args && !args.length) {
     let reply = `You didn't provide any arguments, ${message.author}!`;
 

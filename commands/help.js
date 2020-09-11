@@ -40,7 +40,6 @@ module.exports = {
     }
 
     //help for a specific command
-
     //getting the name of the command
     const name = args[0].toLowerCase();
     const command =
