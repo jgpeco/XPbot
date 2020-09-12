@@ -5,7 +5,7 @@ module.exports = {
   description: 'Creates a character of the RPG group',
   args: true,
   aliases: ['criarpersonagem', 'criarpj'],
-  usage: '[command characterName characterXP]',
+  usage: '[command characterName(for now, accepts only one name) characterXP]',
   cooldown: 5,
   async execute(message, args) {
     try {

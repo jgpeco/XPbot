@@ -2,10 +2,10 @@ const fs = require('fs');
 const Player = require('../model/Player');
 
 module.exports = {
-  name: 'xplevel',
+  name: 'xptolevel',
   description: 'Show XP in specific levels',
   args: true,
-  aliases: ['xpnivel'],
+  aliases: ['xpparanivel', 'xpnonivel'],
   usage: `[command level]`,
   cooldown: 5,
   execute(message, args) {

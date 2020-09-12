@@ -3,7 +3,7 @@ const fs = require('fs');
 module.exports = {
   name: 'mylevel',
   description: 'Show XP in specific levels',
-  aliases: ['meunivel', 'myxp', 'minhaxp'],
+  aliases: ['meunivel', 'myxp', 'minhaxp', 'meuxp'],
   usage: `[command]`,
   cooldown: 5,
   async execute(message) {
