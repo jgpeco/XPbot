@@ -33,7 +33,7 @@ module.exports = {
       await player.save();
 
       message.reply(
-        `$Player created with name: ${player.name} and set to XP: ${player.xp} `
+        `Player created with name: ${player.name} and set to XP: ${player.xp} `
       );
     } catch (err) {
       console.error(err.message);
