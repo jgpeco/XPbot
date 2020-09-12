@@ -3,6 +3,7 @@ const Player = require('../model/Player');
 module.exports = {
   name: 'xpupdate',
   description: 'Updates the amount of XP a character has',
+  args: true,
   aliases: ['xpatualizar', 'atualizarxp', 'updatelevel', 'mudarxp'],
   usage: `[command xpAmount]`,
   cooldown: 5,
