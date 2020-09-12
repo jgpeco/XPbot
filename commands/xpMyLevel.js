@@ -11,7 +11,9 @@ module.exports = {
     const player = message.author.id;
     const playerId = await Player.findOne({ discordUserId: player });
     if (!playerId) {
-      message.channel.send(`There isn't a character assigned to this player`);
+      return message.channel.send(
+        `There isn't a character assigned to this player`
+      );
     }
 
     const playerXP = playerId.xp;
@@ -25,7 +27,7 @@ module.exports = {
         if (playerXP < xp[i].xp && playerXP > xp[i - 1].xp) {
           const xpNextLevel = xp[i].xp - playerXP;
           message.channel.send(
-            `You are at level ${xp[i].level}, you need ${xpNextLevel} xp to the next level`
+            `You are at level ${xp[i].level}, with a total of ${playerXP} XP, you need ${xpNextLevel} xp to the next level`
           );
         }
       }

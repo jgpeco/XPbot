@@ -14,7 +14,7 @@ module.exports = {
     try {
       let char = await Player.findOne({ name: charName });
       if (char.discordUserId) {
-        message.reply(
+        return message.reply(
           `This char is assigned to another user, you have to ask for it to be removed from that user`
         );
       }
