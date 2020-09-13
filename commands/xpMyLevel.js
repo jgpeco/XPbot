@@ -27,7 +27,9 @@ module.exports = {
         if (playerXP < xp[i].xp && playerXP > xp[i - 1].xp) {
           const xpNextLevel = xp[i].xp - playerXP;
           message.channel.send(
-            `You are at level ${xp[i].level}, with a total of ${playerXP} XP, you need ${xpNextLevel} xp to the next level`
+            `You are at level ${
+              xp[i - 1].level
+            }, with a total of ${playerXP} XP, you need ${xpNextLevel} xp to the next level`
           );
         }
       }
